@@ -14,6 +14,8 @@ RUN npm install
 
 COPY server.js .
 
+# In case i have to include all file to copy use  COPY ..
+
 
 # Define the entry point
 ENTRYPOINT [ "node", "server.js" ]
