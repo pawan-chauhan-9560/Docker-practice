@@ -1,0 +1,17 @@
+# Example file for understanding Docker Compose
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres # Coming from hub.docker.com
+    ports:
+      - "5432:5432"
+    environment:  # Corrected typo: 'enviroment' -> 'environment'
+      POSTGRES_USER: pawan
+      POSTGRES_DB: review  # Corrected typo: 'POSTGRES_db' -> 'POSTGRES_DB'
+      POSTGRES_PASSWORD: temp  # Corrected typo: 'POSTGRES_password' -> 'POSTGRES_PASSWORD'
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
